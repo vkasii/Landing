@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Landing</title>
+    <link rel="stylesheet" href="scss/main.scss">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="./script/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo" aria-label="Studio logo. Redirect to home page">
+                <img src="./img/logo.svg" alt="Studio logo image">
+            </a>
+            <nav class="header__menu menu" aria-label="Main navigation">
+                <ul class="menu__list">
+                    <li class="menu__item active">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Work</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                </ul>
+                <a href="tel:01666693456" class="menu__number">
+                    <svg class="icon">
+                        <use href="./img/icons/icons.svg#icon-phone"></use>
+                    </svg>
+                    (01) 666 - 693 - 456
+                </a>
+            </nav>
+            <button class="header__toggler" onclick="toggleNav()" aria-label="Open menu">
+                <span></span>
+            </button>
+            <p class="header__info">Here can be additional navigation</p>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <p class="text-uppercase hero__subtitle">what we do?</p>
+                    <h1 class="hero__title">We grow
+                        <br>
+                        <span class="text-pink">great business</span>
+                    </h1>
+                    <div class="hero__info">
+                        <p class="text-regular">Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.</p>
+                        <a href="#" class="hero__link" aria-label="Read more about Velit">
+                            <svg class="icon">
+                                <use href="./img/icons/icons.svg#icon-sliderArrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__scroll scroll">
+                    <p class="scroll__info text-uppercase">Scroll to see more</p>
+                    <div class="scroll__image-container">
+                        <svg class="scroll__image">
+                            <use href="./img/icons/icons.svg#icon-arrowBottom"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info intro">
+            <div class="container">
+                <div class="info__content intro__content">
+                    <p class="text-uppercase text-pink info__subtitle">intro</p>
+                    <h2 class="intro__title title">Our future</h2>
+                    <p class="text-bold intro__text-bold">Apparently we had reached a great height in the atmosphere,
+                        for the sky was a
+                        dead black, and the stars had ceased to twinkle.</p>
+                    <p class="text-regular intro__text">By the same illusion which lifts the horizon of the sea to the
+                        level of the
+                        spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in
+                        the middle of an immense dark sphere, whose upper half was strewn with silver.</p>
+                    <a href="#" class="btn intro__btn">learn more</a>
+                </div>
+                <div class="intro__right">
+                    <img src="./img/intro.jpg" class="intro__image" alt="Smiling woman">
+                    <div class="intro__citation-container">
+                        <span class="intro__decoration intro__quotes-open">“</span>
+                        <p class="intro__citation">Commodo sed egestas egestas fringilla phasellus faucibus.</p>
+                        <span class="intro__decoration intro__quotes-close">”</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info benefits">
+            <div class="container benefits__container">
+                <div class="info__content">
+                    <p class="text-uppercase text-pink info__subtitle">benefits</p>
+                    <h2 class="benefits__title title">Shaping the future</h2>
+                    <p class="text-bold benefits__text-bold">Eget nunc scelerisque viverra mauris in aliquam. Dignissim
+                        sodales ut eu sem
+                        integer vitae. Libero nunc consequat interdum varius.</p>
+                    <p class="text-regular benefits__text">Magna sit amet purus gravida. Sit amet porttitor eget dolor
+                        morbi non.</p>
+                    <p class="text-regular benefits__text">Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                    </p>
+                    <p class="text-regular benefits__text">Diam phasellus vestibulum lorem sed risus ultricies tristique
+                        nulla. Dui faucibus in ornare quam viverra.</p>
+                    <p class="text-regular benefits__text">Posuere ac ut consequat semper viverra.</p>
+                    <a href="#" class="btn">learn more</a>
+                </div>
+                <div class="benefits__right">
+                    <div class="benefits__image-container">
+                        <img src="./img/benefits.jpg" class="benefits__image"
+                            alt="A cup of tea and a smartphone on the table">
+                        <p class="text-uppercase benefits__image-info benefits__text-uppercase-violet">mobile apps</p>
+                    </div>
+                    <div class="benefits__pagination pagination">
+                        <p class="pagination__info text-uppercase benefits__text-uppercase-violet">1/3</p>
+                        <button class="pagination__btn arrow-btn pagination__btn-prev"
+                            aria-label="Open previous slider">
+                            <svg class="pagination__icon arrow-btn__icon">
+                                <use href="./img/icons/icons.svg#icon-arrowRight"></use>
+                            </svg>
+                        </button>
+                        <button class="pagination__btn arrow-btn pagination__btn-next" aria-label="Open next slider">
+                            <svg class="pagination__icon arrow-btn__icon">
+                                <use href="./img/icons/icons.svg#icon-arrowRight"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe container">
+            <h3 class="title subscribe__title">Subscribe to our newsletter</h3>
+            <p class="subscribe__info text-regular">Cras pulvinar mattis nunc sed blandit.</p>
+            <form class="subscribe__form">
+                <input id="email-address" class="subscribe__input text-bold" type="email" required placeholder="">
+                <label for="email-address" class="subscribe__label text-bold text-uppercase">
+                    <span>Enter email</span>
+                </label>
+                <button type="submit" class="text-pink text-uppercase subscribe__btn">
+                    subscribe
+                    <div class="arrow-btn subscribe__arrow-btn">
+                        <svg class="arrow-btn__icon subscribe__btn-icon">
+                            <use href="./img/icons/icons.svg#icon-arrowRight"></use>
+                        </svg>
+                    </div>
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <a href="#" class="footer__logo" aria-label="After clicking, you will go to the home page">
+                    <img src="./img/footerLogo.svg" alt="Footer logo">
+                </a>
+                <p class="footer__text">Eu augue ut lectus arcu bibendum at.</p>
+            </div>
+            <div class="footer__content">
+                <div class="footer__column footer__menu">
+                    <h4 class="text-uppercase footer__title">Menu</h4>
+                    <ul class="footer__list">
+                        <li>
+                            <a class="footer__link" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Services</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">News</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Gallery</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__services">
+                    <h4 class="text-uppercase footer__title">services</h4>
+                    <ul class="footer__list">
+                        <li>
+                            <a class="footer__link" href="#">Lorem</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Ipsum</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Dolor</a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="#">Sit Amet</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__contact-us">
+                    <h4 class="text-uppercase footer__title">Contact us</h4>
+                    <ul class="footer__list">
+                        <li>
+                            <a class="footer__email footer__text" href="mailto:contact@lop.com">
+                                <svg class="footer__icon">
+                                    <use href="./img/icons/icons.svg#icon-mail"></use>
+                                </svg>
+                                contact@lop.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__phone footer__text" href="tel:856693456">
+                                <svg class="footer__icon">
+                                    <use href="./img/icons/icons.svg#icon-phone"></use>
+                                </svg>
+                                856 - 693 - 456
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column socials">
+                    <h4 class="text-uppercase footer__title">Follow us</h4>
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#">
+                                <svg class="icon socials__icon">
+                                    <use href="./img/icons/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon socials__icon">
+                                    <use href="./img/icons/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon socials__icon">
+                                    <use href="./img/icons/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon socials__icon">
+                                    <use href="./img/icons/icons.svg#icon-youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon socials__icon">
+                                    <use href="./img/icons/icons.svg#icon-mIcon"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer__rights">&copy; <span class="current-year"></span> Lopper by mariuszdaniel. All right
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

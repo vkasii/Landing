@@ -1,0 +1,38 @@
+body {
+    @include mix.flex($fxd: column);
+    min-height: 100vh;
+    font-size: f.toRem(18);
+    color: var.$primary-white-color;
+}
+.main {
+    flex: 1;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.title {
+    font: 500 #{f.toRem(45)} / 1.5 var.$primary-font;
+}
+.text-uppercase {
+    font: 800 #{f.toRem(12)} / 2.08 var.$primary-font;
+    text-transform: uppercase;
+    letter-spacing: 0.48em;
+}
+.text-pink {
+    color: var.$primary-pink-color;
+}
+.text-bold {
+    font: 800 #{f.toRem(18)} / 1.63 var.$primary-font;
+}
+.text-regular {
+    font: 400 #{f.toRem(18)} / 1.63 var.$primary-font;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}

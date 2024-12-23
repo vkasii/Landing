@@ -1,0 +1,201 @@
+.footer {
+    background: var.$secondary-dark-color-bg;
+    padding-block: f.toRem(126);
+
+    @include mix.media-query(1024px) {
+        padding-block: f.toRem(64);
+    }
+
+    &__container {
+        display: flex;
+        gap: 2rem f.toRem(112);
+
+        @include mix.media-query(1024px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: f.toRem(18);
+
+        & .icon {
+            fill: var.$primary-white-color;
+        }
+    }
+
+    &__text {
+        font: 400 #{f.toRem(16)} / 1.63 var.$primary-font;
+    }
+
+    &__left {
+        max-width: 166px;
+        width: 100%;
+
+        @include mix.media-query(1024px) {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        @include mix.flex($fxw: wrap, $g: 2rem, $justify: center);
+    }
+
+    &__column {
+        width: calc(25% - 1.5rem);
+
+        @include mix.media-query(700px) {
+            width: calc((100% - 4rem) / 3);
+        }
+
+        @include mix.media-query(500px) {
+            text-align: center;
+        }
+
+        &.footer__menu {
+
+            @include mix.media-query(700px) {
+                order: 2;
+            }
+
+            @include mix.media-query(500px) {
+                order: 3;
+            }
+        }
+
+        &.footer__services {
+            @include mix.media-query(700px) {
+                order: 3;
+            }
+
+            @include mix.media-query(500px) {
+                order: 4;
+            }
+        }
+
+        &.footer__contact-us {
+            @include mix.media-query(700px) {
+                order: 4;
+            }
+
+            @include mix.media-query(500px) {
+                order: 2;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            @include mix.position($pos: absolute, $t: 100%, $l: 0, $w: calc(100% - 5px), $h: 1px);
+            content: '';
+            background: var.$primary-pink-color;
+        }
+    }
+
+    &__list {
+        padding-top: f.toRem(22);
+    }
+
+    &__link {
+        font: 700 #{f.toRem(12)} / 2.23 var.$primary-font;
+        letter-spacing: 0.08em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__email,
+    &__phone {
+        @include mix.flex($align: center, $g: f.toRem(18));
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include mix.media-query(500px) {
+            justify-content: center;
+        }
+    }
+
+    &__email {
+        margin-bottom: f.toRem(7);
+        
+        .footer__icon {
+            width: 12px;
+            height: 9px;
+        }
+    }
+
+    &__phone {
+
+        .footer__icon {
+            width: 9px;
+            height: 12px;
+            margin-right: 3px;
+        }
+    }
+
+    &__icon {
+        fill: var.$primary-white-color;
+        flex-shrink: 0;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 1rem;
+        padding-top: f.toRem(26);
+    }
+
+    &__rights {
+        order: 5;
+        width: 100%;
+        padding-top: f.toRem(64);
+        font: 400 #{f.toRem(11)} / 1.63 var.$primary-font;
+
+        @include mix.media-query(1024px) {
+            text-align: center;
+        }
+
+        @include mix.media-query(767px) {
+            padding-top: 0;
+        }
+    }
+}
+
+.socials {
+
+    @include mix.media-query(700px) {
+        @include mix.flex($align: center, $fxd: column);
+        order: 1;
+        width: 50%;
+        margin-inline: 20%;
+    }
+
+    @include mix.media-query(500px) {
+        width: 60%;
+        margin-inline: 0;
+    }
+
+    @include mix.media-query(400px) {
+        width: 70%;
+    }
+
+    &__icon {
+        height: 18px;
+        width: 100%;
+        fill: var.$primary-white-color;
+        opacity: 0.9;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@keyframes scroll-info {
+    0%, 30%, 60%, 100% {
+        transform: translateY(0);
+    }
+    15%, 45% {
+        transform: translateY(3px);
+    }
+}
+
+@keyframes animate-next-btn {
+    0%, 30%, 60%, 100% {
+        translate: 0 ;
+    }
+    15%, 45% {
+        translate: 3px;
+    }
+}
+
+@keyframes animate-prev-btn {
+    0%, 30%, 60%, 100% {
+        translate: 0 ;
+    }
+    15%, 45% {
+        translate: -3px;
+    }
+}

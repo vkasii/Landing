@@ -1,0 +1,23 @@
+$primary-white-color: rgb(252, 252, 252);
+$primary-dark-color: rgb(48, 35, 61);
+$primary-pink-color: rgb(246, 16, 103);
+$primary-light-pink-color: rgba(246, 16, 103, 0.5);
+$secondary-light-white-color: rgba(255, 255, 255, 0.25);
+$secondary-white-color: rgb(244, 244, 237);
+$secondary-dark-color-bg: rgb(21, 4, 51);
+$secondary-dark-color: rgb(48, 18, 78);
+$secondary-pink-color: rgb(205, 23, 92);
+$secondary-light-dark-color: rgb(119, 108, 130);
+$secondary-violet-color: rgb(94, 35, 157);
+$secondary-light-violet-color: rgba(94, 35, 157, 0.5);
+$secondary-extra-light-violet-color:rgb(155, 148, 163);
+
+$gradient-lightgrey-color: rgba(196, 196, 196, 0);
+$gradient-dark-color: rgba(49, 18, 81, 0);
+
+$hero-gradient: linear-gradient(to right, $secondary-violet-color 0, $secondary-violet-color 100%), linear-gradient(90.00deg, $secondary-violet-color, $gradient-lightgrey-color 56.771%);
+$benefits-gradient: linear-gradient(to right, $secondary-dark-color 0, $secondary-dark-color 100%), linear-gradient(180.00deg, $gradient-dark-color, $secondary-dark-color 80.069%);;
+$subscribe-btn-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(242, 242, 242, 0.5) 100%);
+
+$primary-font: 'M PLUS 1p', serif;
+$secondary-font: 'Noticia Text', serif;

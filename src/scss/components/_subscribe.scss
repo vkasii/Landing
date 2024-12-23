@@ -1,0 +1,91 @@
+.subscribe {
+    padding-block: f.toRem(55) f.toRem(141);
+    text-align: center;
+
+    @include mix.media-query(500px) {
+        padding-block: f.toRem(54)
+    }
+
+    &__title {
+        color: var.$primary-dark-color;
+    }
+
+    &__info {
+        padding-block: f.toRem(23) f.toRem(45);
+        color: var.$secondary-light-dark-color;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 558px;
+        margin: auto;
+        text-align: left;
+        border-bottom: 3px solid var.$secondary-white-color;
+
+        @include mix.media-query(500px) {
+            @include mix.flex($fxd: column, $align: center, $g: 1rem);
+            border: none;
+        }
+    }
+
+    &__label {
+        order: 1;
+        z-index: 0;
+        width: 100%;
+        padding-left: f.toRem(18);
+        transform: translateY(44px);
+        color: var.$secondary-extra-light-violet-color;
+        transition: 0.3s;
+    }
+
+    &__input {
+        z-index: 1;
+        order: 2;
+        flex: 1;
+        padding-left: f.toRem(18);
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var.$primary-dark-color;
+        caret-color: var.$primary-dark-color;
+
+        @include mix.media-query(500px) {
+            width: 100%;
+            border-bottom: 3px solid var.$secondary-white-color;
+        }
+
+        &:focus + .subscribe__label,
+        &:not(:placeholder-shown) + .subscribe__label {
+            transform: translateY(0);
+        }
+    }
+
+    &__btn {
+        @include mix.flex($align: center, $g: f.toRem(20));
+        z-index: 2;
+        order: 3;
+        padding: f.toRem(14) f.toRem(28);
+        background: var.$subscribe-btn-gradient;
+        border: none;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+
+            & .subscribe__arrow-btn {
+                border-color: var.$primary-pink-color;
+            }
+        }
+    }
+
+    &__arrow-btn {
+        @include mix.flex($align: center, $justify: center);
+        border: 1px solid var.$primary-light-pink-color;
+        transform: rotate(180deg);
+    }
+
+    &__btn-icon {
+        fill: var.$primary-pink-color;
+    }
+}

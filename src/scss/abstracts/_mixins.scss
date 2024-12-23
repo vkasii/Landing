@@ -1,0 +1,25 @@
+@mixin flex($align: null, $justify: null, $fxd: null, $fxw: null, $g: null) {
+    display: flex;
+    @if $align != null { align-items: $align }
+    @if $justify != null { justify-content: $justify }
+    @if $fxd != null { flex-direction: $fxd }
+    @if $fxw != null { flex-wrap: $fxw }
+    @if $g != null { gap: $g }
+}
+
+@mixin position($pos: relative, $t: null, $r: null, $b: null, $l: null, $w: null, $h: null, $z: null) {
+    position: $pos;
+    @if $t != null { top: $t }
+    @if $r != null { right: $r }
+    @if $b != null { bottom: $b }
+    @if $l != null { left: $l }
+    @if $w != null { width: $w }
+    @if $h != null { height: $h }
+    @if $z != null { z-index: $z }
+}
+
+@mixin media-query($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}

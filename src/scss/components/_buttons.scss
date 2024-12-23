@@ -1,0 +1,28 @@
+.btn {
+    display: inline-block;
+    padding-inline: f.toRem(45);
+    border-radius: 36px;
+    background: var.$primary-pink-color;
+    font: 500 #{f.toRem(13)} / f.toRem(45) var.$primary-font;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+        background: var.$secondary-pink-color;
+    }
+}
+
+.arrow-btn {
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    background: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &__icon {
+        width: 9px;
+        height: 9px;
+    }
+}
