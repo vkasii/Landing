@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     padding-top: 129px;
-    background: var.$hero-gradient, url("../img/heroBanner.jpg") center / cover no-repeat;
+    background: var.$hero-gradient, url("../img/heroBanner.webp") center / cover no-repeat;
     background-blend-mode: multiply;
     
     @include mix.media-query(1024px) {

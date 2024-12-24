@@ -183,7 +183,7 @@
     &::before {
         @include mix.position($pos: absolute, $t: 0, $l: 0, $w: calc((100vw - 1200px) / 2 + 859px), $h: 100%);
         content: '';
-        background: var.$benefits-gradient, url('../img/benefitsBg.jpg') center/cover no-repeat;
+        background: var.$benefits-gradient, url('../img/benefitsBg.webp') center/cover no-repeat;
         background-blend-mode: multiply;
 
         @include mix.media-query(1024px) {

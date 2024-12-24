@@ -50,6 +50,10 @@
         color: var.$primary-dark-color;
         caret-color: var.$primary-dark-color;
 
+        &::placeholder {
+            color: transparent;
+        }
+
         @include mix.media-query(500px) {
             width: 100%;
             border-bottom: 3px solid var.$secondary-white-color;
