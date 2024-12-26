@@ -103,8 +103,10 @@
     }
 
     &__link {
-        font: 700 #{f.toRem(12)} / 2.23 var.$primary-font;
+        display: block;
+        font: 700 #{f.toRem(12)} / 2 var.$primary-font;
         letter-spacing: 0.08em;
+        margin-bottom: f.toRem(6);
 
         &:hover {
             text-decoration: underline;
