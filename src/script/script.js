@@ -7,19 +7,16 @@ function toggleClasses() {
     const toggler = document.querySelector('.header__toggler');
     const navigation = document.querySelector('.header__menu');
     const headerInfo = document.querySelector('.header__info');
-    headerInfo.classList.toggle('block')
-    toggler.classList.toggle('open');
-    navigation.classList.toggle('visible');
+
+    headerInfo?.classList.toggle('block')
+    toggler?.classList.toggle('open');
+    navigation?.classList.toggle('visible');
 }
 
 function toggleAriaLabel() {
     const toggler = document.querySelector('.header__toggler');
 
-    if (toggler.getAttribute('aria-label') === 'Open menu') {
-        toggler.setAttribute('aria-label', 'Close menu');
-    } else {
-        toggler.setAttribute('aria-label', 'Open menu');
-    }
+    toggler?.setAttribute('aria-label', toggler?.getAttribute('aria-label') === 'Open menu' ? 'Close menu' : 'Open menu');
 }
 
 window.addEventListener('load', () => {
@@ -33,7 +30,9 @@ document.addEventListener('scroll', () => {
 
 function updateHeaderBackground(value) {
     const header = document.querySelector('.header');
-    header.style.background = `rgba(21, 4, 51, ${window.scrollY / value})`;
+    if (header) {
+        header.style.background = `rgba(21, 4, 51, ${window.scrollY / value})`;
+    }
 }
 
 function getYear() {
@@ -41,4 +40,7 @@ function getYear() {
     return date.getFullYear();
 }
 
-document.querySelector('.current-year').textContent = getYear();
+const currentYearElement = document.querySelector('.current-year');
+if (currentYearElement) {
+    currentYearElement.textContent = getYear();
+}
