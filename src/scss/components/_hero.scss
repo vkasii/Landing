@@ -10,6 +10,7 @@
 
     @include mix.media-query(767px) {
         padding-top: 60px; 
+        background: var.$hero-gradient, url("../img/heroBannerMobile.webp") center / cover no-repeat;
     }
 
     .container {
