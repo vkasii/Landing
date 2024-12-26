@@ -37,15 +37,3 @@ To build the project for production:
     `npm run build`
 
 This will generate optimized files in the dist directory. The --public-url ./ ensures correct paths for relative URLs.
-
-- Sharing via Ngrok
-To share your development server with others via Ngrok:
-
-Install Ngrok if you haven't already:
-    `npm install -g ngrok`
-  
-Run `ngrok http 1234` in terminal
-  
-Copy the provided public URL and share it with others.
-
-### PS(Don't forget to execute the `npm run dev` command in parallel in the terminal)
