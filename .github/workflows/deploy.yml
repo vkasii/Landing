@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Запускатиметься при пуші в гілку main (змініть, якщо потрібно)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout репозиторій
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Встановлення Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Встановлення залежностей
+      - name: Install dependencies
+        run: npm install
+
+      # Збірка проекту
+      - name: Build project
+        run: npm run build
+
+      # Деплой на GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
