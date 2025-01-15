@@ -81,7 +81,7 @@
 
         @include mix.media-query(1440px) {
             right: auto;
-            left: calc(100% - 26vw + (100vw - 1200px) / 2);
+            left: calc(100% - 26vw + (100vw - 1215px) / 2);
         }
 
         @include mix.media-query(1200px) {
